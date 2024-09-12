@@ -1,8 +1,19 @@
-import Header from "./Components/Header";
+import Header from "./components/Header";
+
 import "./global.css";
+import styles from "./App.module.css";
+import Sidebar from "./components/Sidebar";
 
 function App() {
-  return <Header />;
+  return (
+    <div>
+      <Header />
+      <div className={styles.wrapper}>
+        <Sidebar />
+        <main>Posts</main>
+      </div>
+    </div>
+  );
 }
 
 export default App;
